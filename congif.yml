@@ -1,0 +1,65 @@
+# Site settings
+title: My Blog
+email: your-email@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is my awesome blog where I write about my experiences and share my knowledge.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://satoblue.github.io" # the base hostname & protocol for your site
+
+# Social settings
+twitter_username: your_twitter_handle
+github_username:  your_github_handle
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalinks
+permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - README.md
+
+# Include
+include:
+  - _pages
+
+# Custom variables
+author:
+  name: Your Name
+  email: your-email@example.com
+
+# Collections
+collections:
+  my_collection:
+    output: true
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: "/page/:num/"
+
+# Plugins settings
+jekyll_feed:
+  path: atom.xml
+
+# Other settings
+timezone: Japan/Tokyo
